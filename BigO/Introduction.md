@@ -18,15 +18,15 @@ const calcAverage = (numbers) => {
     return sum / numbers.length;
 }
 ```
-####Time Complexity
+#### Time Complexity
 - Sum definition is trivial only happens once  O(1) 
 - For-loop it loops through all the numbers(n) O(n)
 - Return is Also a trivial line happens once   O(1)
 - O(1+n+1) => O(n)
 - We dropped the constants since it make it easier to compare it with other solutions
 
-###Fast Rules
-####Product Rule
+### Fast Rules
+#### Product Rule
 - If the big(O) is the product of multiple terms, drop the constant terms such as static numbers like 1,2 anything not a variable.
 - O(4 * n) = O(m)
 - O(512 * n) = O(m)
@@ -34,17 +34,17 @@ const calcAverage = (numbers) => {
 - O( 5 * n * n ) = O(n*n) = O(n^2)
 - O(8000) = O(1)
 
-####Sum Rule
+#### Sum Rule
 - If the big(O) is the sum of multiple Terms, only keep the largest Term, drop the rest.
 - O(n + 1000) = O(n)
 - O(n^2 + n) = O(n^2)
 - O(n + 500 + n^3 + n^2) = O(n^3)
 
-####The Two rules Together Examples
+#### The Two rules Together Examples
 - O(5n^2 + 100n + 17) = O(n^2 + n) = O(n^2)
 - O( (n/3)^6 + 10n ) = O(n^6)
 
-####Example #1
+#### Example #1
 ```javascript
 const foo = (n) => {
     for(let i = 0; i < n/2; i++) { // O(n/2) = O(n)
@@ -61,10 +61,10 @@ const foo = (n) => {
 
 foo(100);
 ```
-####Time Complexity
+#### Time Complexity
 - O(n + n^2) = O(n^2)
 
-###Space Complexity
+### Space Complexity
 - How much space we use (Variables, objects that grow)
 
 
@@ -82,7 +82,7 @@ const calcAverage = (numbers) => {
   return sum / numbers.length;
 }
 ```
-####Space Complexity
+#### Space Complexity
 - O(3) = O(1) 
 
 
@@ -99,7 +99,7 @@ const doubler = (items) => {
   return newArray;
 }
 ```
-####Space Complexity
+#### Space Complexity
 - O(2n) = O(n)
 
 
@@ -124,10 +124,10 @@ const unique = (numbers) => {
 }
 ```
 
-####Time Complexity
+#### Time Complexity
 - O(n * n) = O(n^2)
 
-####Space Complexity
+#### Space Complexity
 - O(n) Pushing to the array n elements 
 
 Okay how we could improve the n square 
@@ -146,8 +146,8 @@ const unique = (numbers) => {
 }
 ```
 
-####Time Complexity
+#### Time Complexity
 - O(n)
 
-####Space Complexity
+#### Space Complexity
 - O(n) 
